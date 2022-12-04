@@ -8,6 +8,7 @@ const authRoutes = require('./routes/auth');
 
 //db connection
 connection()
+console.log()
 
 app.use(express.json());
 app.use(cors());
