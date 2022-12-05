@@ -10,7 +10,10 @@ const employee = require("./routes/employees");
 connection()
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin:"https://101330469-comp-3123-assignment2-server.vercel.app/api/users/"
+}
+));
 
 //routes
 app.use("/api/users", userRoutes);
