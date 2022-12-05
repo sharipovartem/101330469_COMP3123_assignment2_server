@@ -11,7 +11,7 @@ connection()
 
 app.use(express.json());
 app.use(cors({
-    origin:"https://101330469-comp-3123-assignment2-server.vercel.app/api/users/"
+    origin:"*"
 }
 ));
 
