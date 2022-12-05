@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
-const joi = require('joi');
+const Joi = require('joi');
 const passwordComplexity = require("joi-password-complexity");
 
 const userSchema = new mongoose.Schema({
@@ -24,7 +24,7 @@ const validate = (data) => {
         email: Joi.string().required().label("Email"),
         password: passwordComplexity().required().label("Password")
     })
-    return schema.validate()
+    return schema.validate(data)
 };
 
 module.exports = {User, validate};
